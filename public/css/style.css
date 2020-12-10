@@ -37,33 +37,36 @@ nav .logo, nav .coworking {
 nav .navigation {
   flex: 3;
 }
-nav .navigation li {
-  display: inline;
+nav .navigation ul {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+nav .navigation ul li {
   list-style: none;
   margin: 0 7px;
 }
-nav .logo img {
-  height: 100px;
-}
-nav a {
+nav .navigation ul li a {
   text-decoration: none;
   color: black;
+  max-width: max-content;
   position: relative;
 }
-nav a ::before {
-  content: "";
+nav .navigation ul li a:before {
+  content: " ";
   position: absolute;
   bottom: 0;
-  left: 0;
   width: 100%;
-  height: 2px;
+  height: 1px;
   background-color: black;
   transition: 2s;
   transform: scaleX(0);
 }
-nav a ::before ::hover {
+nav .navigation ul li a:hover:before {
   transform: scaleX(1);
-  color: blue;
+}
+nav .logo img {
+  height: 100px;
 }
 
 /*# sourceMappingURL=style.css.map */
